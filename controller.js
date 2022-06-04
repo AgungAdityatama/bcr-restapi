@@ -17,3 +17,15 @@ exports.tampilsemuadatauser = function (req, res) {
         }
     });
 };
+
+//menampilkan semua data user berdasarkan id
+exports.tampildatauserid = function (req, res) {
+    let id = req.params.id
+    connection.query('SELECT * FROM user WHERE id_user = ?', [id], function (error, rows, fields) {
+        if (error) {
+            console.log(error);
+        } else {
+            response.ok(rows, res)
+        }
+    });
+}
