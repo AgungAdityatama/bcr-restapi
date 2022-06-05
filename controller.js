@@ -64,3 +64,17 @@ exports.ubahUser = function (req, res) {
             }
         });
 };
+
+//Menghapus data berdasarkan ID
+exports.hapusUser = function (req, res) {
+    var id = req.body.id_user;
+
+    connection.query('DELETE FROM user WHERE id_user=?', [id],
+        function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                response.ok("Berhasil Menghapus Data", res)
+            }
+        });
+};

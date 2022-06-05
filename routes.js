@@ -13,4 +13,6 @@ module.exports = function (app) {
         .post(jsonku.tambahUser);
     app.route('/user')
         .put(jsonku.ubahUser);
+    app.route('/user')
+        .delete(jsonku.hapusUser);
 }
