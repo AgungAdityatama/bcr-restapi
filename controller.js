@@ -28,4 +28,21 @@ exports.tampildatauserid = function (req, res) {
             response.ok(rows, res)
         }
     });
-}
+};
+
+//menambahkan data user
+exports.tambahUser = function (req, res) {
+    var name = req.body.name;
+    var email = req.body.email;
+    var password = req.body.password;
+
+    connection.query('INSERT INTO user (name, email, password) VALUES(?,?,?)',
+        [name, email, password],
+        function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                response.ok("Berhasil Menambah Data", res)
+            }
+        });
+};

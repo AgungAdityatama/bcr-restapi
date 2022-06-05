@@ -9,4 +9,6 @@ module.exports = function (app) {
         .get(jsonku.tampilsemuadatauser);
     app.route('/user/:id')
         .get(jsonku.tampildatauserid);
+    app.route('/user')
+        .post(jsonku.tambahUser);
 }
