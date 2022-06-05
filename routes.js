@@ -6,9 +6,11 @@ module.exports = function (app) {
     app.route('/')
         .get(jsonku.index);
     app.route('/user')
-        .get(jsonku.tampilsemuadatauser);
+        .get(jsonku.tampilDataUser);
     app.route('/user/:id')
-        .get(jsonku.tampildatauserid);
+        .get(jsonku.tampilDataUserID);
     app.route('/user')
         .post(jsonku.tambahUser);
+    app.route('/user')
+        .put(jsonku.ubahUser);
 }
