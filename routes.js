@@ -9,8 +9,8 @@ module.exports = function (app) {
         .get(jsonku.tampilDataUser);
     app.route('/user/:id')
         .get(jsonku.tampilDataUserID);
-    app.route('/user')
-        .post(jsonku.tambahUser);
+    // app.route('/user')
+    //     .post(jsonku.tambahUser);
     app.route('/user')
         .put(jsonku.ubahUser);
     app.route('/user')
