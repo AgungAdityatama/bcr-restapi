@@ -93,3 +93,7 @@ exports.login = function (req, res) {
         }
     })
 }
+
+exports.halamanAdmin = function (req, res) {
+    response.ok("Halaman ini hanya untuk Admin", res);
+}
